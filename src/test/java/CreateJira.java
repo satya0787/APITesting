@@ -30,7 +30,6 @@ public class CreateJira {
 				+ "   }\r\n"
 				+ "}\r\n"
 				+ "")
-		.m
 		.when().post("https://satyanandamkomera.atlassian.net/rest/api/3/issue")
 		.then().assertThat().statusCode(201).extract().response();
 	
